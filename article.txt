@@ -1,0 +1,925 @@
+Title: The Book of Job
+
+Author: Anonymous
+
+Author of introduction, etc.: G. K. Chesterton
+
+Illustrator: C. Mary Tongue
+
+Release date: April 3, 2025 [eBook #75778]
+
+Language: English
+
+Original publication: London: Cecil Palmer & Hayward, 1916
+
+Credits: Carla Foust, Brian Wilson, Tim Lindell and the Online Distributed Proofreading Team at https://www.pgdp.net (This file was produced from images generously made available by The Internet Archive/Canadian Libraries)
+
+
+The text of this Reprint of the
+Book of Job is that of the
+authorized version, with
+certain differences in
+the manner of
+printing.
+
+FIRST
+EDITION
+1916
+
+
+
+LIST OF ILLUSTRATIONS
+INTRODUCTION
+THE BOOK OF JOB
+CHAPTER 1
+CHAPTER 2
+CHAPTER 3
+CHAPTER 4
+CHAPTER 5
+CHAPTER 6
+CHAPTER 7
+CHAPTER 8
+CHAPTER 9
+CHAPTER 10
+CHAPTER 11
+CHAPTER 12
+CHAPTER 13
+CHAPTER 14
+CHAPTER 15
+CHAPTER 16
+CHAPTER 17
+CHAPTER 18
+CHAPTER 19
+CHAPTER 20
+CHAPTER 21
+CHAPTER 22
+CHAPTER 23
+CHAPTER 24
+CHAPTER 25
+CHAPTER 26
+CHAPTER 27
+CHAPTER 28
+CHAPTER 29
+CHAPTER 30
+CHAPTER 31
+CHAPTER 32
+CHAPTER 33
+CHAPTER 34
+CHAPTER 35
+CHAPTER 36
+CHAPTER 37
+CHAPTER 38
+CHAPTER 39
+CHAPTER 40
+CHAPTER 41
+CHAPTER 42
+
+
+[Pg ix]
+
+The Book of Job is among the other Old Testament
+Books both a philosophical riddle and a
+historical riddle. It is the philosophical riddle
+that concerns us in such an introduction as this; so we
+may dismiss first the few words of general explanation
+or warning which should be said about the historical
+aspect. Controversy has long raged about which parts
+of this epic belong to its original scheme and which are
+interpolations of considerably later date. The doctors
+disagree, as it is the business of doctors to do; but upon
+the whole the trend of investigation has always been in
+the direction of maintaining that the parts interpolated,
+if any, were the prose prologue and epilogue and possibly
+the speech of the young man who comes in with
+an apology at the end. I do not profess to be competent
+to decide such questions. But whatever decision the
+reader may come to concerning them, there is a general
+truth to be remembered in this connection. When
+you deal with any ancient artistic creation do not
+suppose that it is anything against it that it grew gradually.
+The Book of Job may have grown gradually just
+as Westminster Abbey grew gradually. But the people
+who made the old folk poetry, like the people who
+made Westminster Abbey, did not attach that importance
+[Pg x]to the actual date and the actual author, that
+importance which is entirely the creation of the almost
+insane individualism of modern times. We may put
+aside the case of Job, as one complicated with religious
+difficulties, and take any other, say the case of the Iliad.
+Many people have maintained the characteristic formula
+of modern scepticism, that Homer was not written
+by Homer, but by another person of the same name.
+Just in the same way many have maintained that Moses
+was not Moses but another person called Moses. But
+the thing really to be remembered in the matter of the
+Iliad is that if other people did interpolate the passages,
+the thing did not create the same sense of shock as
+would be created by such proceedings in these individualistic
+times. The creation of the tribal epic was
+to some extent regarded as a tribal work, like the
+building of the tribal temple. Believe then, if you will,
+that the prologue of Job and the epilogue and the speech
+of Elihu are things inserted after the original work was
+composed. But do not suppose that such insertions
+have that obvious and spurious character which would
+belong to any insertions in a modern individualistic
+book. Do not regard the insertions as you would regard
+a chapter in George Meredith which you afterwards
+found had not been written by George Meredith, or
+[Pg xi]half a scene in Ibsen which you found had been cunningly
+sneaked in by Mr. William Archer. Remember
+that this old world which made these old poems like
+the Iliad and Job, always kept the tradition of what it
+was making. A man could almost leave a poem to his
+son to be finished as he would have finished it, just as
+a man could leave a field to his son, to be reaped as he
+would have reaped it. What is called Homeric unity
+may be a fact or not. The Iliad may have been written
+by one man. It may have been written by a hundred
+men. But let us remember that there was more unity
+in those times in a hundred men than there is unity
+now in one man. Then a city was like one man. Now
+one man is like a city in civil war.
+
+Without going, therefore, into questions of unity
+as understood by the scholars, we may say of the scholarly
+riddle that the book has unity in the sense that all
+great traditional creations have unity; in the sense that
+Canterbury Cathedral has unity. And the same is
+broadly true of what I have called the philosophical
+riddle. There is a real sense in which the Book of Job
+stands apart from most of the books included in the
+canon of the Old Testament. But here again those
+are wrong who insist on the entire absence of unity.
+Those are wrong who maintain that the Old Testament
+[Pg xii]is a mere loose library; that it has no consistency
+or aim. Whether the result was achieved by
+some supernal spiritual truth, or by a steady national
+tradition, or merely by an ingenious selection in after
+times, the books of the Old Testament have a quite
+perceptible unity. To attempt to understand the Old
+Testament without realizing this main idea is as absurd
+as it would be to study one of Shakespeare’s plays without
+realizing that the author of them had any philosophical
+object at all. It is as if a man were to read
+the history of Hamlet, Prince of Denmark, thinking all
+the time that he was reading what really purported
+to be the history of an old Danish pirate prince. Such
+a reader would not realize at all that Hamlet’s procrastination
+was on the part of the poet intentional.
+He would merely say, “How long Shakespeare’s hero
+does take to kill his enemy.” So speak the Bible smashers,
+who are unfortunately always at bottom Bible worshippers.
+They do not understand the special tone
+and intention of the Old Testament; they do not understand
+its main idea, which is the idea of all men being
+merely the instruments of a higher power.
+
+Those, for instance, who complain of the atrocities
+and treacheries of the judges and prophets of Israel
+have really got a notion in their head that has nothing
+[Pg xiii]to do with the subject. They are too Christian. They
+are reading back into the pre-Christian scriptures a
+purely Christian idea—the idea of saints, the idea that
+the chief instruments of God are very particularly good
+men. This is a deeper, a more daring, and a more interesting
+idea than the old Jewish one. It is the idea
+that innocence has about it something terrible which
+in the long run makes and re-makes empires and the
+world. But the Old Testament idea was much more
+what may be called the common-sense idea, that
+strength is strength, that cunning is cunning, that
+worldly success is worldly success, and that Jehovah
+uses these things for His own ultimate purpose, just as
+He uses natural forces or physical elements. He uses the
+strength of a hero as He uses that of a Mammoth—without
+any particular respect for the Mammoth. I
+cannot comprehend how it is that so many simple-minded
+sceptics have read such stories as the fraud of
+Jacob and supposed that the man who wrote it (whoever
+he was) did not know that Jacob was a sneak just
+as well as we do. The primeval human sense of honour
+does not change so much as that. But these simple-minded
+sceptics are, like the majority of modern sceptics,
+Christians. They fancy that the patriarchs must
+be meant for patterns; they fancy that Jacob was being
+[Pg xiv]set up as some kind of saint; and in that case I do
+not wonder that they are a little startled. That is not
+the atmosphere of the Old Testament at all. The
+heroes of the Old Testament are not the sons of God,
+but the slaves of God, gigantic and terrible slaves, like
+the genii, who were the slaves of Aladdin.
+
+The central idea of the great part of the Old
+Testament may be called the idea of the loneliness of
+God. God is not the only chief character of the Old
+Testament; God is properly the only character in the
+Old Testament. Compared with His clearness of purpose
+all the other wills are heavy and automatic, like
+those of animals; compared with His actuality all the
+sons of flesh are shadows. Again and again the note is
+struck, “With whom hath he taken counsel?” “I have
+trodden the wine press alone, and of the peoples there
+was no man with me.” All the patriarchs and prophets
+are merely His tools or weapons; for the Lord is a man
+of war. He uses Joshua like an axe or Moses like a
+measuring-rod. For Him Samson is only a sword and
+Isaiah a trumpet. The saints of Christianity are supposed
+to be like God, to be, as it were, little statuettes
+of Him. The Old Testament hero is no more supposed
+to be of the same nature as God than a saw or a hammer
+is supposed to be of the same shape as the carpenter.
+[Pg xv]This is the main key and characteristic of the Hebrew
+scriptures as a whole. There are, indeed, in those
+scriptures innumerable instances of the sort of rugged
+humour, keen emotion, and powerful individuality
+which is never wanting in great primitive prose and
+poetry. Nevertheless the main characteristic remains;
+the sense not merely that God is stronger than man,
+not merely that God is more secret than man, but that
+He means more, that He knows better what He is doing,
+that compared with Him we have something of the
+vagueness, the unreason, and the vagrancy of the beasts
+that perish. “It is he that sitteth above the earth, and
+the inhabitants thereof are as grasshoppers.” We might
+almost put it thus. The book is so intent upon asserting
+the personality of God that it almost asserts the impersonality
+of man. Unless this gigantic cosmic brain
+has conceived a thing, that thing is insecure and void;
+man has not enough tenacity to ensure its continuance.
+“Except the Lord build the house their labour
+is but lost that build it. Except the Lord keep the city
+the watchman watcheth but in vain.”
+
+Everywhere else, then, the Old Testament positively
+rejoices in the obliteration of man in comparison
+with the divine purpose. The Book of Job stands definitely
+alone because the Book of Job definitely asks,
+[Pg xvi]“But what is the purpose of God? Is it worth the
+sacrifice even of our miserable humanity? Of course it
+is easy enough to wipe out our own paltry wills for the
+sake of a will that is grander and kinder. But is it
+grander and kinder? Let God use His tools; let God
+break His tools. But what is He doing and what are
+they being broken for?” It is because of this question
+that we have to attack as a philosophical riddle the
+riddle of the Book of Job.
+
+The present importance of the Book of Job cannot
+be expressed adequately even by saying that it is
+the most interesting of ancient books. We may almost
+say of the Book of Job that it is the most interesting of
+modern books. In truth, of course, neither of the two
+phrases covers the matter, because fundamental human
+religion and fundamental human irreligion are both
+at once old and new; philosophy is either eternal or
+it is not philosophy. The modern habit of saying,
+“This is my opinion, but I may be wrong,” is entirely
+irrational. If I say that it may be wrong I say that is
+not my opinion. The modern habit of saying “Every
+man has a different philosophy; this is my philosophy
+and its suits me”; the habit of saying this is mere
+weak-mindedness. A cosmic philosophy is not constructed
+to fit a man; a cosmic philosophy is constructed
+[Pg xvii]to fit a cosmos. A man can no more possess a private
+religion than he can possess a private sun and moon.
+
+The first of the intellectual beauties of the Book
+of Job is that it is all concerned with this desire to know
+the actuality; the desire to know what is, and not merely
+what seems. If moderns were writing the book we
+should probably find that Job and his comforters got
+on quite well together by the simple operation of referring
+their differences to what is called the temperament,
+saying that the comforters were by nature “optimists”
+and Job by nature a “pessimist.” And they would be
+quite comfortable, as people can often be, for some
+time at least, by agreeing to say what is obviously untrue.
+For if the word “pessimist” means anything at
+all, then emphatically Job is not a pessimist. His case
+alone is sufficient to refute the modern absurdity of
+referring everything to physical temperament. Job does
+not in any sense look at life in a gloomy way. If wishing
+to be happy and being quite ready to be happy
+constitute an optimist, Job is an optimist. He is a perplexed
+optimist; he is an exasperated optimist; he is
+an outraged and insulted optimist. He wishes the universe
+to justify itself, not because he wishes it to be
+caught out, but because he really wishes it to be justified.
+He demands an explanation from God, but he does not
+[Pg xviii]do it at all in the spirit in which Hampden might demand
+an explanation from Charles I. He does it in the
+spirit in which a wife might demand an explanation
+from her husband whom she really respected. He remonstrates
+with his Maker because he is proud of his
+Maker. He even speaks of the Almighty as his enemy,
+but he never doubts, at the back of his mind, that his
+enemy has some kind of a case which he does not understand.
+In a fine and famous blasphemy he says, “Oh,
+that mine adversary had written a book!” It never
+really occurs to him that it could possibly be a bad book.
+He is anxious to be convinced, that is, he thinks that
+God could convince him. In short, we may say again
+that if the word optimist means any thing (which I doubt)
+Job is an optimist. He shakes the pillars of the world
+and strikes insanely at the heavens; he lashes the stars,
+but it is not to silence them; it is to make them speak.
+
+In the same way we may speak of the official
+optimists, the Comforters of Job. Again, if the word
+pessimist means anything (which I doubt) the comforters
+of Job may be called pessimists rather than optimists.
+All that they really believe is not that God is
+good but that God is so strong that it is much more
+judicious to call Him good. It would be the exaggeration
+of censure to call them evolutionists; but they have
+[Pg xix]something of the vital error of the evolutionary optimist.
+They will keep on saying that everything in the universe
+fits into everything else: as if there were anything
+comforting about a number of nasty things all fitting
+into each other. We shall see later how God in the
+great climax of the poem turns this particular argument
+altogether upside down.
+
+When, at the end of the poem, God enters (somewhat
+abruptly), is struck the sudden and splendid note
+which makes the thing as great as it is. All the human
+beings through the story, and Job especially, have been
+asking questions of God. A more trivial poet would
+have made God enter in some sense or other in order
+to answer the questions. By a touch truly to be called
+inspired, when God enters, it is to ask a number more
+questions on His own account. In this drama of scepticism
+God Himself takes up the rôle of sceptic. He does
+what all the great voices defending religion have always
+done. He does, for instance, what Socrates did. He
+turns rationalism against itself. He seems to say that if it
+comes to asking questions, He can ask some questions
+which will fling down and flatten out all conceivable
+human questioners. The poet by an exquisite intuition
+has made God ironically accept a kind of controversial
+equality with His accusers. He is willing to regard
+[Pg xx]it as if it were a fair intellectual duel: “Gird up now
+thy loins like a man; for I will demand of thee, and
+answer thou me.” The everlasting adopts an enormous
+and sardonic humility. He is quite willing to be prosecuted.
+He only asks for the right which every prosecuted
+person possesses; He asks to be allowed to cross-examine
+the witness for the prosecution. And He
+carries yet further the correctness of the legal parallel.
+For the first question, essentially speaking, which He
+asks of Job is the question that any criminal accused by
+Job would be most entitled to ask. He asks Job who he
+is. And Job, being a man of candid intellect, takes a
+little time to consider, and comes to the conclusion
+that he does not know.
+
+This is the first great fact to notice about the
+speech of God, which is the culmination of the inquiry.
+It represents all human sceptics routed by a higher
+scepticism. It is this method, used sometimes by
+supreme and sometimes by mediocre minds, that has
+ever since been the logical weapon of the true mystic.
+Socrates, as I have said, used it when he showed that
+if you only allowed him enough sophistry he could
+destroy all the sophists. Jesus Christ used it when He
+reminded the Sadducees, who could not imagine the
+nature of marriage in heaven, that if it came to that
+[Pg xxi]they had not really imagined the nature of marriage
+at all. In the break up of Christian theology in the
+eighteenth century, Butler used it, when he pointed
+out that rationalistic arguments could be used as much
+against vague religion as against doctrinal religion, as
+much against rationalist ethics as against Christian
+ethics. It is the root and reason of the fact that men
+who have religious faith have also philosophic doubt,
+like Cardinal Newman, Mr. Balfour, or Mr. Mallock.
+These are the small streams of the delta; the Book of
+Job is the first great cataract that creates the river. In
+dealing with the arrogant asserter of doubt, it is not
+the right method to tell him to stop doubting. It is
+rather the right method to tell him to go on doubting,
+to doubt a little more, to doubt every day newer and
+wilder things in the universe, until at last, by some
+strange enlightenment, he may begin to doubt himself.
+
+This, I say, is the first fact touching the speech;
+the fine inspiration by which God comes in at the end,
+not to answer riddles, but to propound them. The
+other great fact which, taken together with this one,
+makes the whole work religious instead of merely
+philosophical, is that other great surprise which makes
+Job suddenly satisfied with the mere presentation of
+something impenetrable. Verbally speaking the enigmas
+[Pg xxii]of Jehovah seem darker and more desolate than
+the enigmas of Job; yet Job was comfortless before the
+speech of Jehovah and is comforted after it. He has
+been told nothing, but he feels the terrible and tingling
+atmosphere of something which is too good to
+be told. The refusal of God to explain His design is
+itself a burning hint of His design. The riddles of
+God are more satisfying than the solutions of man.
+
+Thirdly, of course, it is one of the splendid
+strokes that God rebukes alike the man who accused,
+and the men who defended Him; that He knocks
+down pessimists and optimists with the same hammer.
+And it is in connection with the mechanical and supercilious
+comforters of Job that there occurs the still
+deeper and finer inversion of which I have spoken.
+The mechanical optimist endeavours to justify the
+universe avowedly upon the ground that it is a rational
+and consecutive pattern. He points out that the fine
+thing about the world is that it can all be explained.
+That is the one point, if I may put it so, on which
+God in return, is explicit to the point of violence.
+God says, in effect, that if there is one fine thing about
+the world, as far as men are concerned, it is that it
+cannot be explained. He insists on the inexplicableness
+of everything; “Hath the rain a father?...
+[Pg xxiii]Out of whose womb came the ice?” He goes farther,
+and insists on the positive and palpable unreason of
+things; “Hast thou sent the rain upon the desert where
+no man is, and upon the wilderness wherein there is
+no man?” God will make man see things, if it is only
+against the black background of nonentity. God will
+make Job see a startling universe if He can only do
+it by making Job see an idiotic universe. To startle
+man God becomes for an instant a blasphemer; one
+might almost say that God becomes for an instant an
+atheist. He unrolls before Job a long panorama of
+created things, the horse, the eagle, the raven, the
+wild ass, the peacock, the ostrich, the crocodile. He
+so describes each of them that it sounds like a monster
+walking in the sun. The whole is a sort of psalm
+or rhapsody of the sense of wonder. The maker of all
+things is astonished at the things He has Himself made.
+
+This we may call the third point. Job puts forward
+a note of interrogation; God answers with a note
+of exclamation. Instead of proving to Job that it is an
+explicable world, He insists that it is a much stranger
+world than Job ever thought it was. Lastly, the poet
+has achieved in this speech, with that unconscious artistic
+accuracy found in so many of the simpler epics,
+another and much more delicate thing. Without once
+[Pg xxiv]relaxing the rigid impenetrability of Jehovah in His
+deliberate declaration, he has contrived to let fall here
+and there in the metaphors, in the parenthetical imagery,
+sudden and splendid suggestions that the secret of God
+is a bright and not a sad one—semi-accidental suggestions,
+like light seen for an instant through the cracks
+of a closed door. It would be difficult to praise too
+highly, in a purely poetical sense, the instinctive
+exactitude and ease with which these more optimistic
+insinuations are let fall in other connections, as if the
+Almighty Himself were scarcely aware that He was
+letting them out. For instance, there is that famous
+passage where Jehovah with devastating sarcasm, asks
+Job where he was when the foundations of the world
+were laid, and then (as if merely fixing a date) mentions
+the time when the sons of God shouted for joy. One
+cannot help feeling, even upon this meagre information,
+that they must have had something to shout about. Or
+again, when God is speaking of snow and hail in the
+mere catalogue of the physical cosmos, He speaks of
+them as a treasury that He has laid up against the day
+of battle—a hint of some huge Armageddon in which
+evil shall be at last overthrown.
+
+Nothing could be better, artistically speaking,
+than this optimism breaking through agnosticism like
+[Pg xxv]fiery gold round the edges of a black cloud. Those who
+look superficially at the barbaric origin of the epic may
+think it fanciful to read so much artistic significance
+into its casual similes or accidental phrases. But no one
+who is well acquainted with great examples of semi-barbaric
+poetry, as in the Song of Roland or the
+old ballads, will fall into this mistake. No one who
+knows what primitive poetry is, can fail to realize that
+while its conscious form is simple some of its finer
+effects are subtle. The Iliad contrives to express the
+idea that Hector and Sarpedon have a certain tone or
+tint of sad and chivalrous resignation, not bitter enough
+to be called pessimism and not jovial enough to be called
+optimism; Homer could never have said this in elaborate
+words. But somehow he contrives to say it in
+simple words. The Song of Roland contrives to express
+the idea that Christianity imposes upon its heroes a
+paradox: a paradox of great humility in the matter of
+their sins combined with great ferocity in the matter of
+their ideas. Of course the Song of Roland could not
+say this; but it conveys this. In the same way the Book
+of Job must be credited with many subtle effects which
+were in the author’s soul without being, perhaps, in the
+author’s mind. And of these by far the most important
+remains even yet to be stated. I do not know, and I
+[Pg xxvi]doubt whether even scholars know, if the Book of Job
+had a great effect or had any effect upon the after
+development of Jewish thought. But if it did have any
+effect it may have saved them from an enormous collapse
+and decay. Here in this Book the question is really
+asked whether God invariably punishes vice with terrestrial
+punishment and rewards virtue with terrestrial
+prosperity. If the Jews had answered that question
+wrongly they might have lost all their after influence in
+human history. They might have sunk even down to
+the level of modern well educated society. For when
+once people have begun to believe that prosperity is
+the reward of virtue their next calamity is obvious.
+If prosperity is regarded as the reward of virtue it will
+be regarded as the symptom of virtue. Men will leave
+off the heavy task of making good men successful.
+They will adopt the easier task of making out successful
+men good. This, which has happened throughout
+modern commerce and journalism, is the ultimate
+Nemesis of the wicked optimism of the comforters
+of Job. If the Jews could be saved from it, the Book
+of Job saved them. The Book of Job is chiefly remarkable,
+as I have insisted throughout, for the fact that
+it does not end in a way that is conventionally satisfactory.
+Job is not told that his misfortunes were due
+[Pg xxvii]to his sins or a part of any plan for his improvement.
+But in the prologue we see Job tormented not because
+he was the worst of men, but because he was the best.
+It is the lesson of the whole work that man is most
+comforted by paradoxes. Here is the very darkest and
+strangest of the paradoxes; and it is by all human
+testimony the most reassuring. I need not suggest
+what a high and strange history awaited this
+paradox of the best man in the worst fortune.
+I need not say that in the freest and most
+philosophical sense there is one Old
+Testament figure who is truly a type;
+or say what is pre-figured in the
+wounds of Job.
+
+[Pg 1]
+
+There was a man in the land of Uz, whose
+name was Job; and that man was perfect
+and upright, and one that feared God, and
+eschewed evil. And there were born unto
+him seven sons and three daughters. His
+substance also was seven thousand sheep, and three
+thousand camels, and five hundred yoke of oxen, and
+five hundred she asses, and a very great household;
+so that this man was the greatest of all the men of the
+east. And his sons went and feasted in their houses,
+every one his day; and sent and called for their three
+sisters to eat and to drink with them. And it was so,
+when the days of their feasting were gone about, that
+Job sent and sanctified them, and rose up early in the
+morning, and offered burnt offerings according to
+the number of them all: for Job said, It may be that
+my sons have sinned, and cursed God in their hearts.
+Thus did Job continually. Now there was a day when
+the sons of God came to present themselves before
+the Lord, and Satan came also among them. And the
+Lord said unto Satan, Whence comest thou? Then
+Satan answered the Lord, and said, From going to
+and fro in the earth, and from walking up and down
+[Pg 2]in it. And the Lord said unto Satan, Hast thou considered
+my servant Job, that there is none like him
+in the earth, a perfect and an upright man, one that
+feareth God, and escheweth evil? Then Satan answered
+the Lord, and said, Doth Job fear God for nought?
+Hast not thou made an hedge about him, and about
+his house, and about all that he hath on every side?
+thou hast blessed the work of his hands, and his substance
+is increased in the land. But put forth thine
+hand now, and touch all that he hath, and he will
+curse thee to thy face. And the Lord said unto Satan,
+Behold, all that he hath is in thy power; only upon
+himself put not forth thine hand. So Satan went forth
+from the presence of the Lord.
+
+And there was a day when his sons and his
+daughters were eating and drinking wine in their eldest
+brother’s house: and there came a messenger unto Job,
+and said, The oxen were plowing, and the asses feeding
+beside them: and the Sabeans fell upon them, and
+took them away; yea, they have slain the servants with
+the edge of the sword; and I only am escaped alone to tell
+thee. While he was yet speaking, there came also another,
+and said, The fire of God is fallen from heaven, and hath
+burned up the sheep, and the servants, and consumed
+them; and I only am escaped alone to tell thee. While
+[Pg 3]he was yet speaking, there came also another, and said,
+The Chaldeans made out three bands, and fell upon the
+camels, and have carried them away, yea, and slain
+the servants with the edge of the sword; and I only
+am escaped alone to tell thee. While he was yet speaking,
+there came also another, and said, Thy sons and
+thy daughters were eating and drinking wine in their
+eldest brother’s house: and, behold, there came a
+great wind from the wilderness, and smote the four
+corners of the house, and it fell upon the young men,
+and they are dead; and I only am escaped alone to tell
+thee. Then Job arose, and rent his mantle, and shaved
+his head, and fell down upon the ground, and worshipped,
+and said, Naked came I out of my mother’s
+womb, and naked shall I return thither: the Lord
+gave, and the Lord hath taken away; blessed be the
+name of the Lord. In all this Job sinned not, nor
+charged God foolishly.
+
+Again there was a day when the sons of God came
+to present themselves before the Lord, and Satan came
+also among them to present himself before the Lord.
+[Pg 4]And the Lord said unto Satan, From whence comest
+thou? And Satan answered the Lord, and said, From
+going to and fro in the earth, and from walking up and
+down in it. And the Lord said unto Satan, Hast thou
+considered my servant Job, that there is none like
+him in the earth, a perfect and an upright man, one that
+feareth God, and escheweth evil? and still he holdeth
+fast his integrity, although thou movedest me against
+him to destroy him without cause. And Satan answered
+the Lord, and said, Skin for skin, yea, all that
+a man hath will he give for his life. But put forth
+thine hand now, and touch his bone and his flesh,
+and he will curse thee to thy face. And the Lord
+said unto Satan, Behold, he is in thine hand; but save
+his life. So went Satan forth from the presence of
+the Lord, and smote Job with sore boils from the
+sole of his foot unto his crown. And he took him a
+potsherd to scrape himself withal; and he sat down
+among the ashes. Then said his wife unto him, Dost
+thou still retain thine integrity? curse God, and die.
+But he said unto her, Thou speakest as one of the
+foolish women speaketh. What? shall we receive good
+at the hand of God, and shall we not receive evil?
+In all this did not Job sin with his lips.
+
+Now when Job’s three friends heard of all this
+[Pg 5]evil that was come upon him, they came every one
+from his own place; Eliphaz the Temanite, and Bildad
+the Shuhite, and Zophar the Naamathite: for they
+had made an appointment together to come to mourn
+with him and to comfort him. And when they lifted
+up their eyes afar off, and knew him not, they lifted
+up their voice, and wept; and they rent every one his
+mantle, and sprinkled dust upon their heads toward
+heaven. So they sat down with him upon the ground
+seven days and seven nights, and none spake a word
+unto him: for they saw that his grief was very great.
+
+After this opened Job his mouth, and cursed
+his day. And Job spake, and said,
+
+[Pg 15]
+
+[Pg 39]
+
+[Pg 45]
+
+[Pg 55]
+
+[Pg 73]
+
+So these three men ceased to answer Job, because he
+was righteous in his own eyes. Then was kindled the
+wrath of Elihu the son of Barachel the Buzite, of the
+kindred of Ram: against Job was his wrath kindled,
+because he justified himself rather than God. Also
+against his three friends was his wrath kindled, because
+they had found no answer, and yet had condemned
+Job. Now Elihu had waited till Job had spoken,
+because they were elder than he. When Elihu saw
+that there was no answer in the mouth of these three
+men, then his wrath was kindled.
+
+And it was so, that after the Lord had spoken
+these words unto Job, the Lord said to Eliphaz the
+Temanite, My wrath is kindled against thee, and
+[Pg 101]against thy two friends: for ye have not spoken of
+me the thing that is right, as my servant Job hath.
+Therefore take unto you now seven bullocks and
+seven rams, and go to my servant Job, and offer up
+for yourselves a burnt offering; and my servant Job
+shall pray for you: for him will I accept: lest I deal
+with you after your folly, in that ye have not spoken
+of me the thing which is right, like my servant Job.
+
+So Eliphaz the Temanite and Bildad the Shuhite
+and Zophar the Naamathite went, and did according
+as the Lord commanded them: the Lord also accepted
+Job. And the Lord turned the captivity of
+Job, when he prayed for his friends: also the Lord
+gave Job twice as much as he had before. Then
+came there unto him all his brethren, and all his
+sisters, and all they that had been of his acquaintance
+before, and did eat bread with him in his house: and
+they bemoaned him, and comforted him over all the
+evil that the Lord had brought upon him: every
+man also gave him a piece of money, and every one
+an ear-ring of gold. So the Lord blessed the latter
+end of Job more than his beginning: for he had
+fourteen thousand sheep, and six thousand camels,
+and a thousand yoke of oxen, and a thousand she
+asses. He had also seven sons and three daughters.
+
+[Pg 103]
+
+CECIL PALMER & HAYWARD
+
+Contemporary Russian Composers
+
+By M. MONTAGU-NATHAN
+
+(Author of A History of Russian Music, Glinka, Moussorgsky, Rimsky-Korsakof,
+The Piano Music of Skryabin, etc.)
+
+With many portraits of famous Russian Musicians
+
+
+Demy 8vo          ⁷⁄₆ net          Cloth
+
+
+In this volume M. Montagu-Nathan introduces to the public a number of
+Russian composers, who may be said collectively to constitute the contemporary
+Russian School of Musical Composition, and who are maintaining for Russia its
+supremacy among the musical nations.
+
+Of such composers as Skryabin, Glazounof, Stravinsky, Rebikof,
+Medtner and Rakhmaninof, the author provides a biographical account, and a
+detailed consideration of their creative work; their aims and ideals are discussed,
+and their music subjected to a critical review.
+
+There are some chapters devoted to those younger men whose music has already
+attracted considerable attention in Russia, and whose names are likely ere long to
+become familiar to the musical world.
+
+An introductory section of the book is devoted to a survey of the earlier period
+of musical activity in Russia, in which the founders of the Nationalist movement
+are dealt with and their artistic labours outlined.
+
+THE PATH OF THE MODERN RUSSIAN
+STAGE, and other Essays
+
+
+By ALEXANDER BAKSHY      With 12 Illustrations
+
+
+Demy 8vo          ⁷⁄₆ net          Cloth
+
+
+The modern revival in the art of the theatre has been particularly marked in
+Russia where it has revolutionized many established traditions, and has opened up new
+paths of development. The remarkable progress of the Russian dramatic theatre is
+of special interest to the student, since in no other country the new movement has
+been fruitful of so many original ideas, or has had them realized in such striking forms.
+In the present volume the guiding principles of the Russian stage, such as “faithfulness
+to life” of the Moscow Art Theatre, the various forms of “conventionalism”
+applied at the Theatre of Vera Kommissarzhevsky, and the theories of “theatricality”
+lately propounded by Meyerhold and Evreinov, are subjected to a close analysis.
+The book also includes separate essays on the forms of the theatre, as determined by
+the relationship between the audience and the stage, and on the art aspects of the
+kinematograph.
+
+[Pg 104]
+
+THE GIRL AND THE FAUN
+
+By EDEN PHILLPOTTS
+
+With four Illustrations in colour, and Title Page and Border designed by
+Mr. FRANK BRANGWYN, A.R.A.
+
+
+Crown 4to          6/- net          Cloth
+
+
+Eden Phillpotts has been called “the painter’s novelist,” and in this work he combines his
+peculiar power of bringing colour and form to the sense of his readers, with a story cast in classic
+mould, full of explicit humour and implicit meaning. In his quest for beauty he has never been
+more successful, while the co-operation of England’s greatest painter, Frank Brangwyn, A.R.A.,
+who contributes four full page drawings in colour and title page border in black and white, will
+place this work among the most notable productions of the War.
+
+DELIGHT AND OTHER POEMS
+
+By EDEN PHILLPOTTS
+
+With twelve Illustrations in Black and White, by ALMA ELLIOTT
+
+
+Crown 8vo          ³⁄₆ net          Illustrated Wrapper
+
+
+As a laughter maker Eden Phillpotts has “done his bit” during these dark years, and all men
+are agreed that the relief of light literature and humorous verse are very considerable in these
+days. They rest and distract the mind, and remind us of Nietzsche’s aphorism that, “art is with
+us that we may not perish of too much truth.”
+
+A feature of the work is twelve illustrations by Miss Alma Elliott, which will attract the attention
+of all lovers of art by their wonderful craftsmanship and imagination, and every effort has been
+made by the Publishers to make this volume one of the best gift books of the season.
+
+AN INTRODUCTION TO RUSSIAN MUSIC
+
+By M. MONTAGU-NATHAN
+
+Author of A History of Russian Music, Glinka, Moussorgsky, Rimsky-Korsakof,
+Contemporary Russian Composers
+
+
+Crown 8vo          ⅙ net          Boards
+
+
+An Introduction to Russian Music is a small volume designed to afford a concise account
+of the foundation and development of Russian musical art. It consists of a series of chapters devoted
+to the most famous Russian composers. Prefacing these is an Introduction to the subject;
+following them comes a sketch of what the author has styled The New Age in Russian Music; in
+this section will be found the names of such as Stravinsky, Skryabin and Rebikof.
+
+THE SILVER CHAIN
+
+A Satire on Convention
+
+By SIR WILLIAM BLAKE RICHMOND, K.C.B., R.A., etc.
+
+
+Illustrated Wrapper          500 pages
+Crown 8vo          6/- net          Cloth
+
+
+Sir William Richmond’s eminence in the world of Art and Letters will command for his
+long novel “The Silver Chain” a wide circle of readers. It is a work of great artistic achievement
+and of scholarship and culture. Philosophy, psychology, a delightful sense of humour, subtle
+analysis of the moods and motives of men and women, and a true and artistic presentation of
+nature are the rich elements that make every page of this book of absorbing interest.
+
+[Pg 105]
+
+A BOOK OF LAUGHTER
+
+By EDWIN PUGH
+
+Author of “Punch and Judy,” “Harry the Cockney,” etc.
+
+Specially designed Illustrated Wrapper by F. GARDNER
+
+
+Crown 8vo          6/- net          Cloth
+
+
+“When you want to laugh—mind you do.”—Eden Phillpotts.
+
+“Laughter is day and sobriety is night.”—H. W. Beecher.
+
+“Laugh when you can, it is a cheap medicine. Merriment is a philosophy, not
+well understood. It is the sunny side of existence.”—Lord Byron.
+
+“A Book of Laughter” is a book to read for oneself, a book to keep handy on
+one’s library shelves, and an ideal gift book from friend to friend. A sense of humour
+is the most precious quality of man, and laughter its most glorious attribute. The
+exposition of the philosophy of laughter needs a born humorist, and that Mr. Edwin
+Pugh most certainly is. “A Book of Laughter” is a subtle analysis of our various
+ideas of humour, and illustrated throughout with numerous stories and anecdotes,
+mostly original. There can be no question that Mr. Pugh’s new work will prove to
+be the most humorous book of the year.
+
+A YEAR IN THE GARDEN
+
+A book about Gardens in Prose and Verse
+
+Edited by NORAH ELIZABETH MUSTARD
+
+With Illustrations in Colour by ELLEN WARRINGTON
+
+
+Crown 8vo          5/- net          Cloth
+
+
+—Wordsworth.
+
+An anthology from the works of great authors giving expression to their appreciation
+and love for the gardens which in so many cases helped to inspire their
+work. The passages are so arranged in the form of a journal giving an extract in
+prose or verse for every day in the year. A feature of the work is delightful illustrations
+in colour by Miss Ellen Warrington, whose garden pictures have attained a
+wide and well-merited reputation. The book is a welcome addition to the library of
+the Garden, and will prove a most appropriate gift to Garden Lovers.
+
+[Pg 106]
+
+
+PRINTED BY
+THE MORLAND PRESS LTD
+LONDON
+S W
+
+
+
+Minor punctuation errors have been changed without notice. 
+Hyphenation was standardized. Spelling has been retained as originally
+published.
+
+A table of contents has been created for this version.
+
+In this version, page numbers in the List of Illustrations reflect the position of the illustration in the 
+original text, but links point to current position of illustrations.
+
+Changes that have been made:
