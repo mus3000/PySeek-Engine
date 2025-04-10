@@ -2,11 +2,7 @@ import math
 import documents
 import sqlite3
 from datetime import datetime
-import redis
-import json
 
-# 連接到 Redis (預設在本機的 6379 port)
-r = redis.Redis(host='localhost', port=6379, db=0)
 # ==================== 原有向量搜索功能 ====================
 class VectorCompare:
     def magnitude(self, concordance):
@@ -31,25 +27,20 @@ class VectorCompare:
         return con
 
 
-# ==================== 快取實現 ==================== #
+# 快取資料結構：存儲計算過的相似度結果
+cache = {}
+
+# ==================== 快取實現 ====================
 
 def get_from_cache(searchterm):
-    data = r.get(searchterm.lower())
-    if data:
-        return json.loads(data)
-    return None
-
+    # 嘗試從快取中取出結果
+    return cache.get(searchterm.lower())
 
 def add_to_cache(searchterm, matches):
-    r.set(searchterm.lower(), json.dumps(matches))
-
-def clear_all_cache():
-    r.flushdb()  # 清空當前資料庫的所有快取
-    print("快取清除完畢！")
-
+    # 把結果添加到快取
+    cache[searchterm.lower()] = matches
     
-# ==================== 快取實現結束 ================== #
-
+    
 def save_documents_to_file():
     with open('documents.py', 'w', encoding='utf-8') as f:
         f.write('documents = {\n')
@@ -74,9 +65,8 @@ def vector_search_interface():
         print("\n=== 向量搜索模式 ===")
         print("1. 進行向量搜索")
         print("2. 寫入新文檔")
-        print("3. 清除所有快取")
-        print("4. 返回主選單")
-        choice = input("請選擇操作 (1-4): ")
+        print("3. 返回主選單")
+        choice = input("請選擇操作 (1-3): ")
         
         if choice == '1':
             searchterm = input('輸入搜索關鍵字 (或輸入"back"返回): ')
@@ -138,8 +128,6 @@ def vector_search_interface():
                 break
             add_new_document(content)
         elif choice == '3':
-            clear_all_cache()
-        elif choice == '4':
             break
         else:
             print("無效選擇，請重新輸入")
