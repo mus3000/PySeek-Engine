@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import math
 import documents
 
-url = 'https://www.gutenberg.org/cache/epub/75778/pg75778-images.html'  # 替換成你要抓的網址
+url = 'https://en.wikipedia.org/wiki/Wiki'  # 替換成你要抓的網址
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -21,12 +21,15 @@ with open('article.txt', 'w', encoding='utf-8') as f:
 with open('article.txt', 'r', encoding='utf-8') as f:
     new_article = f.read()
 
-chunk_size = 100
+chunk_size = 1000
 chunks = [new_article[i:i+chunk_size] for i in range(0, len(new_article), chunk_size)]
 
 
 # 更新 documents 字典，並加入新抓取的文章
 new_index = len(documents.documents)
+
+# documents.documents[new_index] = new_article  # 一整篇直接放進去
+
 for i, chunk in enumerate(chunks):
     documents.documents[new_index + i] = chunk
 

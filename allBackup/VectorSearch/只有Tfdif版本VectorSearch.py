@@ -1,5 +1,7 @@
 import math
 import documents
+import sqlite3
+from datetime import datetime
 import redis
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -8,7 +10,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # 連接到 Redis (預設在本機的 6379 port)
 r = redis.Redis(host='localhost', port=6379, db=0)
-
 # ==================== 原有向量搜索功能 ====================
 class VectorCompare:
     def magnitude(self, concordance):
@@ -32,48 +33,21 @@ class VectorCompare:
             con[word] = con.get(word, 0) + 1
         return con
 
-# ==================== 建立倒排索引 ==================== #
-
-def create_inverted_index(documents_dict):
-    inverted_index = {}
-    for doc_id, doc_text in documents_dict.items():
-        for word in set(doc_text.split()):
-            if word not in inverted_index:
-                inverted_index[word] = set()
-            inverted_index[word].add(doc_id)
-    return inverted_index
-
-# ==================== 計算TF-IDF並根據倒排索引檢索文檔 ==================== #
-def perform_tfidf_search(searchterm, documents_dict, inverted_index):
+def perform_tfidf_search(searchterm, documents_dict):
     doc_ids = list(documents_dict.keys())
     doc_texts = list(documents_dict.values())
 
-    # 先根據倒排索引過濾出可能包含搜索詞的文檔
-    relevant_doc_ids = set()
-    for word in searchterm.split():
-        if word in inverted_index:
-            relevant_doc_ids.update(inverted_index[word])
-
-    # 如果沒有相關文檔，返回空
-    if not relevant_doc_ids:
-        return []
-
-    relevant_doc_texts = [documents_dict[doc_id] for doc_id in relevant_doc_ids]
-    relevant_doc_ids = list(relevant_doc_ids)
-
-    # 計算TF-IDF矩陣，將搜索詞和文檔文本合併
-    all_texts = [searchterm] + relevant_doc_texts
+    all_texts = [searchterm] + doc_texts  # 把搜尋字串放在第一個
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(all_texts)
 
-    # 計算搜索詞和所有相關文檔的餘弦相似度
+    # 計算第一個（searchterm）對所有文檔的相似度
     cosine_similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:]).flatten()
 
-    # 選出相似度大於0的文檔
     matches = []
     for i, score in enumerate(cosine_similarities):
         if score > 0:
-            matches.append((score, relevant_doc_ids[i], relevant_doc_texts[i][:100], relevant_doc_texts[i]))
+            matches.append((score, doc_ids[i], doc_texts[i][:100], doc_texts[i]))
 
     matches.sort(reverse=True)
     return matches
@@ -86,12 +60,14 @@ def get_from_cache(searchterm):
         return json.loads(data)
     return None
 
+
 def add_to_cache(searchterm, matches):
     r.set(searchterm.lower(), json.dumps(matches))
 
 def clear_all_cache():
     r.flushdb()  # 清空當前資料庫的所有快取
     print("快取清除完畢！")
+
 
 # ==================== 快取實現結束 ================== #
 
@@ -114,8 +90,7 @@ def add_new_document(content):
     return new_index
 
 def vector_search_interface():
-    inverted_index = create_inverted_index(documents.documents)
-    
+    v = VectorCompare()
     while True:
         print("\n=== 向量搜索模式 ===")
         print("1. 進行向量搜索")
@@ -131,14 +106,29 @@ def vector_search_interface():
             
             # 嘗試從快取中讀取結果
             matches = get_from_cache(searchterm)
+            # matches = []
             
             if matches is None:
-                matches = perform_tfidf_search(searchterm, documents.documents, inverted_index)
+                matches = []
+                matches = perform_tfidf_search(searchterm, documents.documents)
+
+                # for doc_id, content in documents.documents.items():
+                #     if isinstance(content, str):
+                #         relation = v.relation(
+                #             v.concordance(searchterm.lower()),
+                #             v.concordance(content.lower())
+                #         )
+                #         if relation > 0:
+                #             matches.append((relation, doc_id, content[:100], content))
+                        
+                        
+                # 儲存結果到快取中
                 add_to_cache(searchterm, matches)
                 
             matches.sort(reverse=True)
             
             if matches:
+                # 先顯示所有匹配結果
                 print("\n找到以下匹配文檔:")
                 for i, (score, doc_id, snippet, full_content) in enumerate(matches[:5], 1):
                     print(f"\n結果 {i}:")
@@ -147,10 +137,12 @@ def vector_search_interface():
                     print(f"摘要: {snippet}")
                     print("-" * 50)
                 
+                # 統一詢問用戶要查看哪個文檔
                 while True:
                     doc_choice = input("\n輸入要查看完整內容的文檔ID (或輸入 'back' 返回): ")
                     if doc_choice.lower() == 'back':
                         break
+                        
                     try:
                         doc_choice = int(doc_choice)
                         matching_docs = {doc_id: full_content for _, doc_id, _, full_content in matches}
@@ -158,7 +150,7 @@ def vector_search_interface():
                         if doc_choice in matching_docs:
                             print("\n完整內容：")
                             print(matching_docs[doc_choice])
-                            break
+                            break  # 顯示完後退出循環
                         else:
                             print("無效的文檔ID，請從顯示的結果中選擇")
                     except ValueError:
