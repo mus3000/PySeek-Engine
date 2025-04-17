@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import math
 import documents
 
-url = 'https://en.wikipedia.org/wiki/Wiki'  # 替換成你要抓的網址
+url = 'https://en.wikipedia.org/wiki/Wiki_software'  # 替換成你要抓的網址
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -21,7 +21,7 @@ with open('article.txt', 'w', encoding='utf-8') as f:
 with open('article.txt', 'r', encoding='utf-8') as f:
     new_article = f.read()
 
-chunk_size = 1000
+chunk_size = 10000
 chunks = [new_article[i:i+chunk_size] for i in range(0, len(new_article), chunk_size)]
 
 

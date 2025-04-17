@@ -175,7 +175,7 @@ def boolean_search_interface():
 
 def perform_boolean_search(query, documents_dict, inverted_index):
     def tokenize(query):
-        return re.findall(r'\b(?:AND|OR|NOT)\b|[\w]+|[()]', query.upper())
+        return re.findall(r'\b(?:AND|OR|NOT)\b|[\w]+', query.upper())
 
     def to_postfix(tokens):
         precedence = {'NOT': 3, 'AND': 2, 'OR': 1}
@@ -183,41 +183,36 @@ def perform_boolean_search(query, documents_dict, inverted_index):
         stack = []
 
         for token in tokens:
-            if token not in precedence and token not in {'(', ')'}:
-                output.append(token)
-            elif token == '(':
-                stack.append(token)
-            elif token == ')':
-                while stack and stack[-1] != '(':
+            if token in precedence:
+                while stack and precedence.get(stack[-1], 0) >= precedence[token]:
                     output.append(stack.pop())
-                stack.pop()  # remove '('
+                stack.append(token)
             else:
-                while stack and stack[-1] != '(' and precedence.get(stack[-1], 0) >= precedence[token]:
-                    output.append(stack.pop())
-                stack.append(token)
-
+                output.append(token)
         while stack:
             output.append(stack.pop())
-
         return output
 
     def eval_postfix(postfix_tokens):
         stack = []
+        all_docs = set(documents_dict.keys())
 
         for token in postfix_tokens:
-            if token not in {'AND', 'OR', 'NOT'}:
-                stack.append(inverted_index.get(token.lower(), set()))
-            elif token == 'NOT':
+            if token == 'NOT':
                 operand = stack.pop()
-                result = set(documents_dict.keys()) - operand
+                result = all_docs - operand
                 stack.append(result)
-            else:
+            elif token in ('AND', 'OR'):
                 right = stack.pop()
                 left = stack.pop()
                 if token == 'AND':
-                    stack.append(left & right)
-                elif token == 'OR':
-                    stack.append(left | right)
+                    result = left & right
+                else:
+                    result = left | right
+                stack.append(result)
+            else:
+                result = inverted_index.get(token.lower(), set())
+                stack.append(result)
 
         return stack[0] if stack else set()
 
@@ -227,58 +222,20 @@ def perform_boolean_search(query, documents_dict, inverted_index):
 
     if not matched_doc_ids:
         return []
-    
-    excluded_terms = set()
-    i = 0
-    while i < len(tokens):
-        if tokens[i] == 'NOT':
-            excluded_terms.add(tokens[i+1].lower())
-            i += 2
-        else:
-            i += 1
-            
-    # 過濾結果：確保最終結果中不包含被排除的詞
-    filtered_docs = []
-    for doc_id in matched_doc_ids:
-        doc_text = documents_dict[doc_id]
-        # 檢查文檔是否包含任何被排除的詞
-        if not any(excluded_term in doc_text.lower() for excluded_term in excluded_terms):
-            filtered_docs.append(doc_id)
 
-    if not filtered_docs:
-        return []
-    
-    
-    # 提取用於相似度計算的詞（非NOT詞）
-    query_terms = [token.lower() for token in tokens 
-                  if token not in {'AND', 'OR', 'NOT', '(', ')'} 
-                  and token.lower() not in excluded_terms]
+    relevant_doc_texts = [documents_dict[doc_id] for doc_id in matched_doc_ids]
+    matched_doc_ids = list(matched_doc_ids)
 
-    relevant_doc_texts = [documents_dict[doc_id] for doc_id in filtered_docs]
-    
-    # 計算相似度（僅使用非NOT詞）
-    if query_terms:
-        query_for_similarity = ' '.join(query_terms)
-        all_texts = [query_for_similarity] + relevant_doc_texts
-        vectorizer = TfidfVectorizer()
-        tfidf_matrix = vectorizer.fit_transform(all_texts)
-        cosine_similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:]).flatten()
-    else:
-        cosine_similarities = [0.5] * len(filtered_docs)
+    # 用 TF-IDF + cosine similarity 排序
+    all_texts = [query] + relevant_doc_texts
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(all_texts)
+
+    cosine_similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:]).flatten()
 
     matches = []
-    for i, doc_id in enumerate(filtered_docs):
-        # 確保摘要不顯示被排除的詞
-        snippet = relevant_doc_texts[i][:100]
-        # 可以選擇性地過濾摘要中的排除詞
-        for term in excluded_terms:
-            snippet = snippet.replace(term, '[FILTERED]')
-        matches.append((
-            cosine_similarities[i],
-            doc_id,
-            snippet,
-            relevant_doc_texts[i]
-        ))
+    for i, score in enumerate(cosine_similarities):
+        matches.append((score, matched_doc_ids[i], relevant_doc_texts[i][:100], relevant_doc_texts[i]))
 
     matches.sort(reverse=True)
     return matches

@@ -132,159 +132,6 @@ def add_new_document(content):
     print(f"New document added with index: {new_index}")
     return new_index
 
-def boolean_search_interface():
-    inverted_index = create_inverted_index(documents.documents)
-
-    while True:
-        print("\n=== 布林查詢模式 ===")
-        print("提示：你可以使用 AND / OR / NOT，例如：apple AND banana NOT cherry")
-        searchterm = input("輸入布林查詢語句 (或輸入 'back' 返回): ")
-        if searchterm.lower() == 'back':
-            break
-
-        matches = perform_boolean_search(searchterm, documents.documents, inverted_index)
-
-        if matches:
-            print("\n找到以下匹配文檔:")
-            for i, (score, doc_id, snippet, full_content) in enumerate(matches[:5], 1):
-                print(f"\n結果 {i}:")
-                print(f"相似度: {score:.4f}")
-                print(f"文檔ID: {doc_id}")
-                highlighted_snippet = highlight_keywords(snippet, searchterm.split())
-                print(f"摘要: {highlighted_snippet}")
-                print("-" * 50)
-
-            while True:
-                doc_choice = input("\n輸入要查看完整內容的文檔ID (或輸入 'back' 返回): ")
-                if doc_choice.lower() == 'back':
-                    break
-                try:
-                    doc_choice = int(doc_choice)
-                    matching_docs = {doc_id: full_content for _, doc_id, _, full_content in matches}
-
-                    if doc_choice in matching_docs:
-                        print("\n完整內容：")
-                        print(matching_docs[doc_choice])
-                        break
-                    else:
-                        print("無效的文檔ID，請從顯示的結果中選擇")
-                except ValueError:
-                    print("請輸入有效的文檔ID數字")
-        else:
-            print("沒有找到匹配的文檔")
-
-def perform_boolean_search(query, documents_dict, inverted_index):
-    def tokenize(query):
-        return re.findall(r'\b(?:AND|OR|NOT)\b|[\w]+|[()]', query.upper())
-
-    def to_postfix(tokens):
-        precedence = {'NOT': 3, 'AND': 2, 'OR': 1}
-        output = []
-        stack = []
-
-        for token in tokens:
-            if token not in precedence and token not in {'(', ')'}:
-                output.append(token)
-            elif token == '(':
-                stack.append(token)
-            elif token == ')':
-                while stack and stack[-1] != '(':
-                    output.append(stack.pop())
-                stack.pop()  # remove '('
-            else:
-                while stack and stack[-1] != '(' and precedence.get(stack[-1], 0) >= precedence[token]:
-                    output.append(stack.pop())
-                stack.append(token)
-
-        while stack:
-            output.append(stack.pop())
-
-        return output
-
-    def eval_postfix(postfix_tokens):
-        stack = []
-
-        for token in postfix_tokens:
-            if token not in {'AND', 'OR', 'NOT'}:
-                stack.append(inverted_index.get(token.lower(), set()))
-            elif token == 'NOT':
-                operand = stack.pop()
-                result = set(documents_dict.keys()) - operand
-                stack.append(result)
-            else:
-                right = stack.pop()
-                left = stack.pop()
-                if token == 'AND':
-                    stack.append(left & right)
-                elif token == 'OR':
-                    stack.append(left | right)
-
-        return stack[0] if stack else set()
-
-    tokens = tokenize(query)
-    postfix = to_postfix(tokens)
-    matched_doc_ids = eval_postfix(postfix)
-
-    if not matched_doc_ids:
-        return []
-    
-    excluded_terms = set()
-    i = 0
-    while i < len(tokens):
-        if tokens[i] == 'NOT':
-            excluded_terms.add(tokens[i+1].lower())
-            i += 2
-        else:
-            i += 1
-            
-    # 過濾結果：確保最終結果中不包含被排除的詞
-    filtered_docs = []
-    for doc_id in matched_doc_ids:
-        doc_text = documents_dict[doc_id]
-        # 檢查文檔是否包含任何被排除的詞
-        if not any(excluded_term in doc_text.lower() for excluded_term in excluded_terms):
-            filtered_docs.append(doc_id)
-
-    if not filtered_docs:
-        return []
-    
-    
-    # 提取用於相似度計算的詞（非NOT詞）
-    query_terms = [token.lower() for token in tokens 
-                  if token not in {'AND', 'OR', 'NOT', '(', ')'} 
-                  and token.lower() not in excluded_terms]
-
-    relevant_doc_texts = [documents_dict[doc_id] for doc_id in filtered_docs]
-    
-    # 計算相似度（僅使用非NOT詞）
-    if query_terms:
-        query_for_similarity = ' '.join(query_terms)
-        all_texts = [query_for_similarity] + relevant_doc_texts
-        vectorizer = TfidfVectorizer()
-        tfidf_matrix = vectorizer.fit_transform(all_texts)
-        cosine_similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:]).flatten()
-    else:
-        cosine_similarities = [0.5] * len(filtered_docs)
-
-    matches = []
-    for i, doc_id in enumerate(filtered_docs):
-        # 確保摘要不顯示被排除的詞
-        snippet = relevant_doc_texts[i][:100]
-        # 可以選擇性地過濾摘要中的排除詞
-        for term in excluded_terms:
-            snippet = snippet.replace(term, '[FILTERED]')
-        matches.append((
-            cosine_similarities[i],
-            doc_id,
-            snippet,
-            relevant_doc_texts[i]
-        ))
-
-    matches.sort(reverse=True)
-    return matches
-
-
-
 def vector_search_interface():
     inverted_index = create_inverted_index(documents.documents)
   
@@ -293,10 +140,9 @@ def vector_search_interface():
         print("1. 進行向量搜索")
         print("2. 寫入新文檔")
         print("3. 清除所有快取")
-        print("4. 布林查詢模式")
-        print("5. 返回主選單")
+        print("4. 返回主選單")
 
-        choice = input("請選擇操作 (1-5): ")
+        choice = input("請選擇操作 (1-4): ")
         
         if choice == '1':
             searchterm = input('輸入搜索關鍵字 (或輸入"back"返回): ')
@@ -348,11 +194,6 @@ def vector_search_interface():
         elif choice == '3':
             clear_all_cache()
         elif choice == '4':
-            boolean_search_interface()
-        elif choice == '5':
             break
         else:
             print("無效選擇，請重新輸入")
-
-
-

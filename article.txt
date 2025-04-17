@@ -1,154 +1,103 @@
+Wiki software (also known as a wiki engine or a wiki application) is collaborative software that runs a wiki, which allows the users to create and collaboratively edit pages or entries via a web browser. A wiki system is usually a web application that runs on one or more web servers. The content, including previous revisions, is usually stored in either a file system or a database. Wikis are a type of web content management system, and the most commonly supported off-the-shelf software that web hosting facilities offer.
 
 
+There are dozens of actively maintained wiki engines. They vary in the platforms they run on,  the programming language they were developed in, whether they are open-source or proprietary, their support for natural language characters and conventions, and their assumptions about technical versus social control of editing.
 
 
+The first generally recognized "wiki" application, WikiWikiWeb, was created by American computer programmer Ward Cunningham, and launched on c2.com in 1995.[1] "WikiWikiWeb" was also the name of the wiki that ran on the software, and in the first years of wikis' existence there was no great distinction made between the contents of wikis and the software they ran on, possibly because almost every wiki ran on its own customized software.
 
 
-A wiki (/ˈwɪki/ ⓘ WICK-ee) is a form of hypertext publication on the internet which is collaboratively edited and managed by its audience directly through a web browser. A typical wiki contains multiple pages that can either be edited by the public or limited to use within an organization for maintaining its internal knowledge base.
+Wiki software originated from older version control systems used for documentation and software in the 1980s.  By the mid-1990s these generally had web browser interfaces.  However, they lacked the ability to easily create links between internal pages without writing HTML code.  For WikiWikiWeb, the CamelCase naming convention was used to indicate internal links, without requiring HTML code.
 
 
-Wikis are powered by wiki software, also known as wiki engines. Being a form of content management system, these differ from other web-based systems such as blog software or static site generators in that the content is created without any defined owner or leader. Wikis have little inherent structure, allowing one to emerge according to the needs of the users.[1] Wiki engines usually allow content to be written using a lightweight markup language and sometimes edited with the help of a rich-text editor.[2] There are dozens of different wiki engines in use, both standalone and part of other software, such as bug tracking systems. Some wiki engines are free and open-source, whereas others are proprietary. Some permit control over different functions (levels of access); for example, editing rights may permit changing, adding, or removing material. Others may permit access without enforcing access control. Further rules may be imposed to organize content. In addition to hosting user-authored content, wikis allow those users to interact, hold discussions, and collaborate.[3]
+By the time MediaWiki appeared, this convention had been largely abandoned in favor of explicitly marking links in edited source code with double square brackets.  Page names thus did not interrupt the flow of English and could follow the standard English capitalization convention.  Case insensitivity on the first letter but not subsequent letters supported standard English capitalization conventions and let writers author their pages in ordinary English, with the linking of particular words and phrases afterward.  This proved to be the critical change that allowed ordinary authors of English to write wiki pages, and non-technical users to read them.  This policy was extended to other natural languages, avoiding the use of unusual-looking text or awkward capitalization that violates the language's own rules.
 
 
-There are hundreds of thousands of wikis in use, both public and private, including wikis functioning as knowledge management resources, note-taking tools, community websites, and intranets. Ward Cunningham, the developer of the first wiki software, WikiWikiWeb, originally described wiki as "the simplest online database that could possibly work".[4] "Wiki" (pronounced [wiki][note 1]) is a Hawaiian word meaning "quick".[5][6][7]
+Over the next 10 years, many more wiki applications were written, in a variety of programming languages. After 2005, there began to be a move toward increasing consolidation and standardization: many less-popular wiki applications were gradually abandoned, and fewer new applications were created. Relatively few of the wiki engines currently in use were created after 2006.
 
 
-The online encyclopedia project Wikipedia is the most popular wiki-based website, as well being one of the internet's most popular websites, having been ranked consistently as such since at least 2007.[8] Wikipedia is not a single wiki but rather a collection of hundreds of wikis, with each one pertaining to a specific language, making it the largest reference work of all time.[9] The English-language Wikipedia has the largest collection of articles, standing at 6,979,405 as of April 2025.[10]
+Some content management systems, such as Microsoft SharePoint, have also adopted wiki-like functionality.
 
 
-In their 2001 book The Wiki Way: Quick Collaboration on the Web, Cunningham and co-author Bo Leuf described the essence of the wiki concept:[11][12]
+In general new wiki engines have not followed the data formats (wiki markup languages) of the existing engines, making them of limited use for those who have already invested in large knowledge bases in existing software.  As a rule newer wiki projects have not succeeded in attracting large numbers of users from the existing wiki software base.
 
 
-Some wikis will present users with an edit button or link directly on the page being viewed. This will open an interface for writing, formatting, and structuring page content. The interface may be a source editor, which is text-based and employs a lightweight markup language (also known as wikitext, wiki markup, or wikicode), or a visual editor. For example, in a source editor, starting lines of text with asterisks could create a bulleted list.
+The most well-known data format arguably is MediaWiki's, and correspondingly has been reimplemented in other wikis:
 
 
-The syntax and features of wiki markup languages for denoting style and structure can vary greatly among implementations. Some allow the use of HTMLTooltip Hypertext Markup Language and CSSTooltip Cascading Style Sheets,[13] while others prevent the use of these to foster uniformity in appearance.
+None of these alternatives support the extensions available under standard MediaWiki, some of which extend or alter its data format.
 
 
-A short section of Alice's Adventures in Wonderland rendered in wiki markup:
+In 2007 a project named (Wiki)Creole to create a standardized markup language for wikis was completed.  As of 2022, the effort has had significant technical success, gaining support through implementation in many engines,[3] but limited social success as it is still relatively unused and unknown, has few cross-markup conversion tools for migrating existing knowledge bases to it and no major engines use it as their native markup syntax.
 
 
-"I've had nothing yet," Alice replied in an offended tone, "so I can't take more."
+There are essentially three types of usage for wiki software: public-facing wikis with a potentially large community of readers and editors, private enterprise wikis for data management by corporations and other organizations, and personal wikis, meant to be used by a single person to manage notes, and usually run on a desktop. Some types of wiki software are specifically designed for one of the usage types, while other types can be used for all three, but contain functionality, either in their core or through plugins, that help with one or more of the usage types.
 
 
-"You mean you can't take less," said the Hatter. "It's very easy to take more than nothing."
+Public wikis are usually open to the public to read, edit and comment on some or all of the article space of each wiki. Many offer registration to offer further access and controls to each user and a few have, in-part commercialised aspects or further access, such as the popular wiki farm, Fandom.
 
 
+MediaWiki is by far the most dominant software as it powers Wikipedia, consistently and by a large margin, the most visited public wiki,[4] it also powers many other public wikis as well.[5] Other wiki engines used regularly for public wikis include MoinMoin and PmWiki, along with many others.[5]
 
 
+Other Internet websites, based on wiki software, include encyclopedias such as Sensei's Library, Parlia, and  WikiTree.
 
-While wiki engines have traditionally offered source editing to users, in recent years some implementations have added a rich text editing mode. This is usually implemented, using JavaScript, as an interface which translates formatting instructions chosen from a toolbar into the corresponding wiki markup or HTML. This is generated and submitted to the server transparently, shielding users from the technical detail of markup editing and making it easier for them to change the content of pages. An example of such an interface is the VisualEditor in MediaWiki, the wiki engine used by Wikipedia. WYSIWYG editors may not provide all the features available in wiki markup, and some users prefer not to use them, so a source editor will often be available simultaneously.
 
+Enterprise wiki software is software intended to be used in a corporate (or organizational) context,[6] especially to enhance internal knowledge sharing. It tends to have a greater emphasis on features like access control, integration with other software, and document management. Most proprietary wiki applications specifically market themselves as enterprise solutions, including Socialtext, Jive, Traction TeamPage and Notion.
 
-Some wiki implementations keep a record of changes made to wiki pages, and may store every version of the page permanently. This allows authors to revert a page to an older version to rectify a mistake, or counteract a malicious or inappropriate edit to its content.[14]
 
+Increasingly offerings appear which use the name 'wiki' but do not offer basic elements common to established wikis, like Wiki Markup and Link-first workflow as in Confluence (since 2018),[7], Full Text Search as in Microsoft Teams,[8] or Version Control.
 
-These stores are typically presented for each page in a list, called a "log" or "edit history", available from the page via a link in the interface. The list displays metadata for each revision to the page, such as the time and date of when it was stored, and the name of the person who created it, alongside a link to view that specific revision. A diff (short for "difference") feature may be available, which highlights the changes between any two revisions.
 
+In addition, some open source wiki applications also describe themselves as enterprise solutions, including XWiki, Foswiki,[9] TWiki,[10] and BlueSpice.[11] Some open-source wiki applications, though they do not specifically bill themselves as enterprise solutions, have marketing materials geared for enterprise users, like Tiki Wiki CMS Groupware[12] and MediaWiki.[13] Many other wiki applications have also been used within enterprises.
 
-The edit history view in many wiki implementations will include edit summaries written by users when submitting changes to a page. Similar to the function of a log message in a revision control system, an edit summary is a short piece of text which summarizes and perhaps explains the change, for example "Corrected grammar" or "Fixed table formatting to not extend past page width". It is not inserted into the article's main text.
 
+Among the many companies and government organizations that use wikis internally are Adobe Systems, Amazon.com, Intel, Microsoft, and the United States intelligence community.
 
-Traditionally, wikis offer free navigation between their pages via hypertext links in page text, rather than requiring users to follow a formal or structured navigation scheme. Users may also create indexes or table of contents pages, hierarchical categorization via a taxonomy, or other forms of ad hoc content organization. Wiki implementations can provide one or more ways to categorize or tag pages to support the maintenance of such index pages, such as a backlink feature which displays all pages that link to a given page. Adding categories or tags to a page makes it easier for other users to find it.
 
+Within organizations, wikis may either add to or replace centrally managed content management systems. Their decentralized nature allows them, in principle, to disseminate needed information across an organization more rapidly and more cheaply than a centrally controlled knowledge repository. Wikis can also be used for document management, project management, customer relationship management, enterprise resource planning, and many other kinds of data management.
 
-Most wikis allow the titles of pages to be searched amongst, and some offer full text search of all stored content.
 
+Features of wikis which can serve an enterprise include:
 
-Some wiki communities have established navigational networks between each other using a system called WikiNodes. A WikiNode is a page on a wiki which describes and links to other, related wikis. Some wikis operate a structure of neighbors and delegates, wherein a neighbor wiki is one which discusses similar content or is otherwise of interest, and a delegate wiki is one which has agreed to have certain content delegated to it.[15] WikiNode networks act as webrings which may be navigated from one node to another to find a wiki which addresses a specific subject.
 
+Software that is specifically designed for running personal wikis includes Tomboy, PmWiki, and ConnectedText (now discontinued). Other, more general, wiki applications have components geared for individual users, including MoinMoin (which offers a "DesktopEdition"[14]), and TiddlyWiki.
 
-The syntax used to create internal hyperlinks varies between wiki implementations. Beginning with the WikiWikiWeb in 1995, most wikis used camel case to name pages,[16] which is when words in a phrase are capitalized and the spaces between them removed. In this system, the phrase "camel case" would be rendered as "CamelCase". In early wiki engines, when a page was displayed, any instance of a camel case phrase would be transformed into a link to another page named with the same phrase.
 
+Most wiki software uses a special syntax, known as wiki markup, for users to format the text, instead of requiring them to enter in HTML. Some wiki applications also include a WYSIWYG editor, either instead of or in addition to the wiki markup editing.
 
-While this system made it easy to link to pages, it had the downside of requiring pages to be named in a form deviating from standard spelling, and titles of a single word required abnormally capitalizing one of the letters (e.g. "WiKi" instead of "Wiki"). Some wiki implementations attempt to improve the display of camel case page titles and links by reinserting spaces and possibly also reverting to lower case, but this simplistic method is not able to correctly present titles of mixed capitalization. For example, "Kingdom of France" as a page title would be written as "KingdomOfFrance", and displayed as "Kingdom Of France".
 
+Based on the atomic property of database systems, any edit should be traced. On wiki software, the chronology of edits (e.g. published by Internet users) in any given article may be locally saved with a common .xml file extension by people having administrator rights.
 
-To avoid this problem, the syntax of wiki markup gained free links, wherein a term in natural language could be wrapped in special characters to turn it into a link without modifying it. The concept was given the name in its first implementation, in UseModWiki in February 2001.[17] In that implementation, link terms were wrapped in a double set of square brackets, for example [[Kingdom of France]]. This syntax was adopted by a number of later wiki engines.
 
+There are a variety of wiki hosting services, otherwise known as wiki farms, that host users' wikis on a server. Some wiki software is only available in hosted form: PBworks, Wetpaint and Wikispaces are all examples of wiki hosting services that run on code that is only available on those sites. Other wiki software is available in both hosted and downloadable form, including Confluence, Socialtext, MediaWiki and XWiki.
 
-It is typically possible for users of a wiki to create links to pages that do not yet exist, as a way to invite the creation of those pages. Such links are usually differentiated visually in some fashion, such as being colored red instead of the default blue, which was the case in the original WikiWikiWeb, or by appearing as a question mark next to the linked words.
 
+Wiki software can include features that come with traditional content management systems, such as calendars, to-do lists, blogs and discussion forums. All of these can either be stored via versioned wiki pages, or simply be a separate piece of functionality. Software that supports blogs with wiki-style editing and versioning is sometimes known as "bliki" software.
 
-WikiWikiWeb was the first wiki.[18] Ward Cunningham started developing it in 1994, and installed it on the Internet domain c2.com on March 25, 1995. Cunningham gave it the name after remembering a Honolulu International Airport counter employee telling him to take the "Wiki Wiki Shuttle" bus that runs between the airport's terminals, later observing that "I chose wiki-wiki as an alliterative substitute for 'quick' and thereby avoided naming this stuff quick-web."[19][20]
 
+Tiki Wiki CMS Groupware is an example of wiki software that is designed to support such features at its core. Many of the enterprise wiki applications, such as TWiki, Confluence and SharePoint, also support such features, as do open-source applications like MediaWiki and XWiki, via plugins.[15]
 
-Cunningham's system was inspired by his having used Apple's hypertext software HyperCard, which allowed users to create interlinked "stacks" of virtual cards.[21] HyperCard, however, was single-user, and Cunningham was inspired to build upon the ideas of Vannevar Bush, the inventor of hypertext, by allowing users to "comment on and change one another's text."[2][22] Cunningham says his goals were to link together people's experiences to create a new literature to document programming patterns, and to harness people's natural desire to talk and tell stories with a technology that would feel comfortable to those not used to "authoring".[21]
 
+Some wiki applications let users embed scripting-style calls into wiki pages, which are processed by the wiki's parser and run either when the page is saved or when it is displayed. XWiki and MediaWiki are examples of such applications.[16]
 
-Wikipedia became the most famous wiki site[clarification needed], launched in January 2001 and entering the top ten most popular websites in 2007. In the early 2000s, wikis were increasingly adopted in enterprise as collaborative software. Common uses included project communication, intranets, and documentation, initially for technical users. Some companies use wikis as their collaborative software and as a replacement for static intranets, and some schools and universities use wikis to enhance group learning. On March 15, 2007, the word wiki was listed in the online Oxford English Dictionary.[23]
 
+Specifically XWiki offers support for the following scripting languages: Groovy, Velocity, Ruby, Python, PHP or more generally any JSR223 scripting language.
 
-In the late 1990s and early 2000s, the word "wiki" was used to refer to both user-editable websites and the software that powers them, and the latter definition is still occasionally in use.[1]
 
+Wiki software can let users store data via the wiki, in a way that can be exported via the Semantic Web, or queried internally within the wiki. A wiki that allows such annotation is known as a semantic wiki. The current best-known semantic wiki software is Semantic MediaWiki, a plugin to MediaWiki.
 
-By 2014, Ward Cunningham's thinking on the nature of wikis had evolved, leading him to write[24] that the word "wiki" should not be used to refer to a single website, but rather to a mass of user-editable pages or sites so that a single website is not "a wiki" but "an instance of wiki". In this concept of wiki federation, in which the same content can be hosted and edited in more than one location in a manner similar to distributed version control, the idea of a single discrete "wiki" no longer made sense.[25]
 
+Some wiki software have special handling for accessing by mobile devices, such as mobile phones. This is usually done by displaying conservative HTML coding.[17][18]
 
-The software which powers a wiki may be implemented as a series of scripts which operate an existing web server, a standalone application server that runs on one or more web servers, or in the case of personal wikis, run as a standalone application on a single computer. Some wikis use flat file databases to store page content, while others use a relational database,[26] as indexed database access is faster on large wikis, particularly for searching.
 
+Various approaches to providing wiki functionality when the user is not online have been tried. For users who need to simply read the wiki's content when offline, a copy of the content can often be made easily; in the case of Wikipedia, CD-ROMs and printed versions have been made of parts of Wikipedia's content.
 
-Wikis can also be created on wiki hosting services (also known as wiki farms), where the server-side software is implemented by the wiki farm owner, and may do so at no charge in exchange for advertisements being displayed on the wiki's pages. Some hosting services offer private, password-protected wikis requiring authentication to access. Free wiki farms generally contain advertising on every page.
 
+Allowing offline editing, however (where the changes are synchronized when the user is back online), is a much more difficult process. One approach to doing this is using a distributed revision control system as a backend of the wiki, in peer-to-peer style. With this approach, there is no central store of the wiki's content; instead, every user keeps a complete copy of the wiki locally, and the software handles merging and propagating of changes when they are made. This is the approach taken by the ikiwiki engine (which can use the distributed revision control system Git as its back-end), and Code Co-op (a distributed revision control system that includes a wiki component). 
 
-The four basic types of users who participate in wikis are readers, authors, wiki administrators and system administrators. System administrators are responsible for the installation and maintenance of the wiki engine and the container web server. Wiki administrators maintain content and, through having elevated privileges, are granted additional functions (including, for example, preventing edits to pages, deleting pages, changing users' access rights, or blocking them from editing).[27]
 
+Wiki software can be distributed.[19] XWiki is able to function in this way.[20] Smallest Federated Wiki promotes a federation of wiki servers,[21]
 
-Wikis are generally designed with a soft security philosophy in which it is easy to correct mistakes or harmful changes, rather than attempting to prevent them from happening in the first place. This allows them to be very open while providing a means to verify the validity of recent additions to the body of pages. Most wikis offer a recent changes page which shows recent edits, or a list of edits made within a given time frame.[28] Some wikis can filter the list to remove edits flagged by users as "minor" and automated edits.[29] The version history feature allows harmful changes to be reverted quickly and easily.[14]
 
-
-Some wiki engines provide additional content control, allowing remote monitoring and management of a page or set of pages to maintain quality. A person willing to maintain pages will be alerted of modifications to them, allowing them to verify the validity of new editions quickly.[30] Such a feature is often called a watchlist.
-
-
-Some wikis also implement patrolled revisions, in which editors with the requisite credentials can mark edits as being legitimate. A flagged revisions system can prevent edits from going live until they have been reviewed.[31]
-
-
-Wikis may allow any person on the web to edit their content without having to register an account on the site first (anonymous editing), or require registration as a condition of participation.[32] On implementations where an administrator is able to restrict editing of a page or group of pages to a specific group of users, they may have the option to prevent anonymous editing while allowing it for registered users.[33]
-
-
-Critics of publicly editable wikis argue that they could be easily tampered with by malicious individuals, or even by well-meaning but unskilled users who introduce errors into the content. Proponents maintain that these issues will be caught and rectified by a wiki's community of users.[2][18] High editorial standards in medicine and health sciences articles, in which users typically use peer-reviewed journals or university textbooks as sources, have led to the idea of expert-moderated wikis.[34] Wiki implementations retaining and allowing access to specific versions of articles has been useful to the scientific community, by allowing expert peer reviewers to provide links to trusted version of articles which they have analyzed.[35]
-
-
-Trolling and cybervandalism on wikis, where content is changed to something deliberately incorrect or a hoax, offensive material or nonsense is added, or content is maliciously removed, can be a major problem. On larger wiki sites it is possible for such changes to go unnoticed for a long period.
-
-
-In addition to using the approach of soft security for protecting themselves, larger wikis may employ sophisticated methods, such as bots that automatically identify and revert vandalism. For example, on Wikipedia, the bot ClueBot NG uses machine learning to identify likely harmful changes, and reverts these changes within minutes or even seconds.[36]
-
-
-Disagreements between users over the content or appearance of pages may cause edit wars, where competing users repetitively change a page back to a version that they favor. Some wiki software allows administrators to prevent pages from being editable until a decision has been made on what version of the page would be most appropriate.[3]
-
-
-Some wikis may be subject to external structures of governance which address the behavior of persons with access to the system, for example in academic contexts.[26]
-
-
-As most wikis allow the creation of hyperlinks to other sites and services, the addition of malicious hyperlinks, such as sites infected with malware, can also be a problem. For example, in 2006 a German Wikipedia article about the Blaster Worm was edited to include a hyperlink to a malicious website, and users of vulnerable Microsoft Windows systems who followed the link had their systems infected with the worm.[3] Some wiki engines offer a blacklist feature which prevents users from adding hyperlinks to specific sites that have been placed on the list by the wiki's administrators.
-
-
-The English Wikipedia has the largest user base among wikis on the World Wide Web[37] and ranks in the top 10 among all Web sites in terms of traffic.[38] Other large wikis include the WikiWikiWeb, Memory Alpha, Wikivoyage, and previously Susning.nu, a Swedish-language knowledge base. Medical and health-related wiki examples include Ganfyd, an online collaborative medical reference that is edited by medical professionals and invited non-medical experts.[39] Many wiki communities are private, particularly within enterprises. They are often used as internal documentation for in-house systems and applications. Some companies use wikis to allow customers to help produce software documentation.[40] A study of corporate wiki users found that they could be divided into "synthesizers" and "adders" of content. Synthesizers' frequency of contribution was affected more by their impact on other wiki users, while adders' contribution frequency was affected more by being able to accomplish their immediate work.[41] From a study of thousands of wiki deployments, Jonathan Grudin concluded careful stakeholder analysis and education are crucial to successful wiki deployment.[42]
-
-
-In 2005, the Gartner Group, noting the increasing popularity of wikis, estimated that they would become mainstream collaboration tools in at least 50% of companies by 2009.[43][needs update] Wikis can be used for project management.[44][45][unreliable source] Wikis have also been used in the academic community for sharing and dissemination of information across institutional and international boundaries.[46] In those settings, they have been found useful for collaboration on grant writing, strategic planning, departmental documentation, and committee work.[47] In the mid-2000s, the increasing trend among industries toward collaboration placed a heavier impetus upon educators to make students proficient in collaborative work, inspiring even greater interest in wikis being used in the classroom.[3]
-
-
-Wikis have found some use within the legal profession and within the government. Examples include the Central Intelligence Agency's Intellipedia, designed to share and collect intelligence assessments, DKosopedia, which was used by the American Civil Liberties Union to assist with review of documents about the internment of detainees in Guantánamo Bay;[48] and the wiki of the United States Court of Appeals for the Seventh Circuit, used to post court rules and allow practitioners to comment and ask questions. The United States Patent and Trademark Office operates Peer-to-Patent, a wiki to allow the public to collaborate on finding prior art relevant to the examination of pending patent applications. Queens, New York has used a wiki to allow citizens to collaborate on the design and planning of a local park. Cornell Law School founded a wiki-based legal dictionary called Wex, whose growth has been hampered by restrictions on who can edit.[33]
-
-
-In academic contexts, wikis have also been used as project collaboration and research support systems.[49][50]
-
-
-A city wiki or local wiki is a wiki used as a knowledge base and social network for a specific geographical locale.[51][52][53] The term city wiki is sometimes also used for wikis that cover not just a city, but a small town or an entire region. Such a wiki contains information about specific instances of things, ideas, people and places. Such highly localized information might be appropriate for a wiki targeted at local viewers, and could include:
-
-
-A study of several hundred wikis in 2008 showed that a relatively high number of administrators for a given content size is likely to reduce growth;[54] access controls restricting editing to registered users tends to reduce growth; a lack of such access controls tends to fuel new user registration; and that a higher ratio of administrators to regular users has no significant effect on content or population growth.[55]
-
-
-Joint authorship of articles, in which different users participate in correcting, editing, and compiling the finished product, can also cause editors to become tenants in common of the copyright, making it impossible to republish without permission of all co-owners, some of whose identities may be unknown due to pseudonymous or anonymous editing.[3] Some copyright issues can be alleviated through the use of an open content license. Version 2 of the GNU Free Documentation License includes a specific provision for wiki relicensing, and Creative Commons licenses are also popular. When no license is specified, an implied license to read and add content to a wiki may be deemed to exist on the grounds of business necessity and the inherent nature of a wiki.
-
-
-Wikis and their users can be held liable for certain activities that occur on the wiki. If a wiki owner displays indifference and forgoes controls (such as banning copyright infringers) that they could have exercised to stop copyright infringement, they may be deemed to have authorized infringement, especially if the wiki is primarily used to infringe copyrights or obtains a direct financial benefit, such as advertising revenue, from infringing activities.[3] In the United States, wikis may benefit from Section 230 of the Communications Decency Act, which protects sites that engage in "Good Samaritan" policing of harmful material, with no requirement on the quality or quantity of such self-policing.[56] It has also been argued that a wiki's enforcement of certain rules, such as anti-bias, verifiability, reliable sourcing, and no-original-research policies, could pose legal risks.[57] When defamation occurs on a wiki, theoretically, all users of the wiki can be held liable, because any of them had the ability to remove or amend the defamatory material from the "publication". It remains to be seen whether wikis will be regarded as more akin to an internet service provider, which is generally not held liable due to its lack of control over publications' contents, than a publisher.[3] It has been recommended that trademark owners monitor what information is presented about their trademarks on wikis, since courts may use such content as evidence pertaining to public perceptions, and they can edit entries to rectify misinformation.[58]
-
-
-Active conferences and meetings about wiki-related topics include:
-
-
-Former wiki-related events include:
+There has also been research done on allowing Wikipedia to be run as a decentralized wiki.[22][23]
