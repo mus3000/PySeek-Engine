@@ -11,7 +11,12 @@ from rapidfuzz import fuzz, process
 #syntax highlight
 HIGHLIGHT_COLOR = "\033[1;34m"  # 藍色 + 粗體
 RESET_COLOR = "\033[0m"
-
+RESET = "\033[0m"
+BOLD = "\033[1m"
+CYAN = "\033[36m"
+YELLOW = "\033[33m"
+GREEN = "\033[32m"
+RED = "\033[31m"
 
 
 
@@ -287,72 +292,72 @@ def perform_boolean_search(query, documents_dict, inverted_index):
 
 def vector_search_interface():
     inverted_index = create_inverted_index(documents.documents)
-  
-    while True:
-        print("\n=== 向量搜索模式 ===")
-        print("1. 進行向量搜索")
-        print("2. 寫入新文檔")
-        print("3. 清除所有快取")
-        print("4. 布林查詢模式")
-        print("5. 返回主選單")
 
-        choice = input("請選擇操作 (1-5): ")
-        
+    while True:
+        print(f"\n{BOLD}{CYAN}=== 向量搜索模式 ==={RESET}")
+        print(f"{YELLOW}1.{RESET} 進行向量搜索")
+        print(f"{YELLOW}2.{RESET} 寫入新文檔")
+        print(f"{YELLOW}3.{RESET} 清除所有快取")
+        print(f"{YELLOW}4.{RESET} 布林查詢模式")
+        print(f"{YELLOW}5.{RESET} 返回主選單")
+
+        choice = input(f"{BOLD}請選擇操作 (1-5): {RESET}")
+
         if choice == '1':
-            searchterm = input('輸入搜索關鍵字 (或輸入"back"返回): ')
+            searchterm = input(f'{BOLD}輸入搜索關鍵字 (或輸入"back"返回): {RESET}')
             if searchterm.lower() == 'back':
                 break
-            
-            # 嘗試從快取中讀取結果
+
             matches = get_from_cache(searchterm)
-            
+
             if matches is None:
                 matches = perform_tfidf_search(searchterm, documents.documents, inverted_index)
                 add_to_cache(searchterm, matches)
-                
+
             matches.sort(reverse=True)
-            
+
             if matches:
-                print("\n找到以下匹配文檔:")
+                print(f"\n{GREEN}找到以下匹配文檔:{RESET}")
                 for i, (score, doc_id, snippet, full_content) in enumerate(matches[:5], 1):
-                    print(f"\n結果 {i}:")
-                    print(f"相似度: {score:.4f}")
-                    print(f"文檔ID: {doc_id}")
+                    print(f"\n{BOLD}結果 {i}:{RESET}")
+                    print(f"{CYAN}相似度:{RESET} {score:.4f}")
+                    print(f"{CYAN}文檔ID:{RESET} {doc_id}")
                     highlighted_snippet = highlight_keywords(snippet, searchterm.split())
-                    print(f"摘要: {highlighted_snippet}")
+                    print(f"{CYAN}摘要:{RESET} {highlighted_snippet}")
                     print("-" * 50)
-                
+
                 while True:
-                    doc_choice = input("\n輸入要查看完整內容的文檔ID (或輸入 'back' 返回): ")
+                    doc_choice = input(f"\n{BOLD}輸入要查看完整內容的文檔ID (或輸入 'back' 返回): {RESET}")
                     if doc_choice.lower() == 'back':
                         break
                     try:
                         doc_choice = int(doc_choice)
                         matching_docs = {doc_id: full_content for _, doc_id, _, full_content in matches}
-                        
+
                         if doc_choice in matching_docs:
-                            print("\n完整內容：")
+                            print(f"\n{GREEN}完整內容：{RESET}")
                             print(matching_docs[doc_choice])
                             break
                         else:
-                            print("無效的文檔ID，請從顯示的結果中選擇")
+                            print(f"{RED}無效的文檔ID，請從顯示的結果中選擇{RESET}")
                     except ValueError:
-                        print("請輸入有效的文檔ID數字")
+                        print(f"{RED}請輸入有效的文檔ID數字{RESET}")
             else:
-                print("沒有找到匹配的文檔")
+                print(f"{RED}沒有找到匹配的文檔{RESET}")
         elif choice == '2':
-            content = input("輸入文檔內容 (或輸入'back'返回): ")
+            content = input(f"{BOLD}輸入文檔內容 (或輸入'back'返回): {RESET}")
             if content.lower() == 'back':
                 break
             add_new_document(content)
         elif choice == '3':
             clear_all_cache()
+            print(f"{GREEN}快取已清除{RESET}")
         elif choice == '4':
             boolean_search_interface()
         elif choice == '5':
             break
         else:
-            print("無效選擇，請重新輸入")
+            print(f"{RED}無效選擇，請重新輸入{RESET}")
 
 
 
