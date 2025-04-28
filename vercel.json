@@ -2,7 +2,11 @@
     "builds" : [
         {
             "src" : "api.py",
-            "use" : "@vercel/python"
+            "use" : "@vercel/python",
+            "excludeFiles": [
+                "__pyacahce__/**",
+                "myenv/**"
+            ]
         }
     ],
     "routes" : [
