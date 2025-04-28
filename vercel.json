@@ -8,8 +8,7 @@
     ],
     "functions": {
         "api/**": {
-            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**",
-            "use" : "@vercel/python"
+            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         }
     }
 
