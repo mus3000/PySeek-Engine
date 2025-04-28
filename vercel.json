@@ -13,7 +13,8 @@
     ],
     "functions": {
         "api/**": {
-            "excludeFiles": "{__pycache__,myenv}/**"
+        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         }
     }
+
 }
