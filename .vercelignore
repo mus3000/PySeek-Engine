@@ -4,6 +4,3 @@ grabDoc.py
 myenv/
 __pycache__/
 *.pyc
-.vercel
-vercel.json
-
