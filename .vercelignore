@@ -4,3 +4,4 @@ grabDoc.py
 myenv/
 __pycache__/
 *.pyc
+.documents.py
