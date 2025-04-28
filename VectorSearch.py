@@ -50,7 +50,7 @@ class VectorCompare:
         if type(document) != str:
             raise ValueError('Supplied Argument should be of type string')
         con = {}
-        for word in document.split():
+        for word in re.findall(r'(?u)\b\w+\b', document):
             con[word] = con.get(word, 0) + 1
         return con
 
@@ -87,7 +87,7 @@ def perform_tfidf_search(searchterm, documents_dict, inverted_index):
 
     # 計算TF-IDF矩陣，將搜索詞和文檔文本合併
     all_texts = [searchterm] + relevant_doc_texts
-    vectorizer = TfidfVectorizer()
+    vectorizer = TfidfVectorizer(token_pattern=r'(?u)\b\w+\b')
     tfidf_matrix = vectorizer.fit_transform(all_texts)
 
     # 計算搜索詞和所有相關文檔的餘弦相似度
@@ -118,15 +118,27 @@ def clear_all_cache():
     print("快取清除完畢！")
 
 # ==================== 快取實現結束 ================== #
-
+# def save_documents_to_file():
+#     with open('documents.py', 'w', encoding='utf-8') as f:
+#         f.write('documents = {\n')
+#         for key, value in documents.documents.items():
+#             cleaned_value = value.replace("'", "\\'").replace("\n", "\\n")
+#             f.write(f"    {key}: '{cleaned_value}',\n")
+#         f.write('}\n')
 def save_documents_to_file():
-    with open('documents.py', 'w', encoding='utf-8') as f:
-        f.write('documents = {\n')
-        for key, value in documents.documents.items():
-            cleaned_value = value.replace("'", "\\'").replace("\n", "\\n")
-            f.write(f"    {key}: '{cleaned_value}',\n")
-        f.write('}\n')
-
+    """優化批量保存性能"""
+    try:
+        with open('documents.py', 'w', encoding='utf-8') as f:
+            f.write('documents = {\n')
+            for key, value in documents.documents.items():
+                # 使用 repr() 自動處理轉義字符
+                f.write(f"    {key}: {repr(value)},\n")
+            f.write('}\n')
+    except Exception as e:
+        print(f"Error saving documents: {str(e)}")
+        raise
+    
+    
 def add_new_document(content):
     if not isinstance(content, str):
         print("Error: Content must be a string")
@@ -136,6 +148,64 @@ def add_new_document(content):
     save_documents_to_file()
     print(f"New document added with index: {new_index}")
     return new_index
+
+def add_new_documents_batch(contents: list):
+    """批量添加多個文檔"""
+    if not isinstance(contents, list):
+        print("Error: Input must be a list of strings")
+        return []
+    
+    new_ids = []
+    for content in contents:
+        if not isinstance(content, str):
+            print(f"Warning: Skipping non-string content: {content}")
+            continue
+        new_id = add_new_document(content)
+        new_ids.append(new_id)
+        
+    return new_ids
+
+
+def delete_document(doc_id):
+    """刪除指定文檔"""
+    try:
+        doc_id = int(doc_id)
+    except ValueError:
+        print(f"{RED}錯誤：文檔ID必須是整數{RESET}")
+        return
+    if doc_id not in documents.documents:
+        print(f"{RED}錯誤：找不到ID為 {doc_id} 的文檔{RESET}")
+        return
+    del documents.documents[doc_id]
+    save_documents_to_file()
+    print(f"{GREEN}文檔 ID {doc_id} 已成功刪除{RESET}")
+        
+        
+def delete_document_batch(doc_ids):
+    """批量刪除指定文檔"""
+    not_found_ids = []  # 用於儲存找不到的文檔 ID
+    for doc_id in doc_ids:
+        try:
+            doc_id = int(doc_id)
+        except ValueError:
+            print(f"{RED}錯誤：文檔ID必須是整數{RESET}")
+            not_found_ids.append(doc_id)
+            continue  # 如果文檔ID無法轉換為整數，跳過當前的ID
+            
+        if doc_id not in documents.documents:
+            print(f"{RED}錯誤：找不到ID為 {doc_id} 的文檔{RESET}")
+            not_found_ids.append(doc_id)
+            continue  # 如果找不到該ID的文檔，跳過當前的ID
+
+        del documents.documents[doc_id]
+        print(f"{GREEN}文檔 ID {doc_id} 已成功刪除{RESET}")
+
+    save_documents_to_file()
+
+    if not_found_ids:
+        return f"未找到文檔ID：{', '.join(map(str, not_found_ids))}"
+    return "所有指定的文檔已成功刪除"
+
 
 def boolean_search_interface():
     inverted_index = create_inverted_index(documents.documents)
@@ -180,7 +250,7 @@ def boolean_search_interface():
 
 def perform_boolean_search(query, documents_dict, inverted_index):
     def tokenize(query):
-        return re.findall(r'\b(?:AND|OR|NOT)\b|[\w]+|[()]', query.upper())
+        return re.findall(r'\b(?:AND|OR|NOT)\b|[\w\d]+|[()]', query.upper())
 
     def to_postfix(tokens):
         precedence = {'NOT': 3, 'AND': 2, 'OR': 1}
@@ -297,9 +367,12 @@ def vector_search_interface():
         print(f"\n{BOLD}{CYAN}=== 向量搜索模式 ==={RESET}")
         print(f"{YELLOW}1.{RESET} 進行向量搜索")
         print(f"{YELLOW}2.{RESET} 寫入新文檔")
-        print(f"{YELLOW}3.{RESET} 清除所有快取")
-        print(f"{YELLOW}4.{RESET} 布林查詢模式")
-        print(f"{YELLOW}5.{RESET} 返回主選單")
+        print(f"{YELLOW}3.{RESET} 批量寫入新文檔")
+        print(f"{YELLOW}4.{RESET} 刪除文檔")
+        print(f"{YELLOW}5.{RESET} 批量刪除文檔")
+        print(f"{YELLOW}6.{RESET} 清除所有快取")
+        print(f"{YELLOW}7.{RESET} 布林查詢模式")
+        print(f"{YELLOW}8.{RESET} 返回主選單")
 
         choice = input(f"{BOLD}請選擇操作 (1-5): {RESET}")
 
@@ -350,11 +423,41 @@ def vector_search_interface():
                 break
             add_new_document(content)
         elif choice == '3':
+            batch_content = input(f"{BOLD}輸入批量文檔內容 (使用JSON格式，如[\"文檔1\",\"文檔2\"])(或輸入'back'返回): {RESET}")
+            if batch_content.lower() == 'back':
+                break
+            try:
+                # 解析輸入的JSON字符串為Python列表
+                import json
+                documents_list = json.loads(batch_content)
+                if isinstance(documents_list, list):
+                    new_ids = add_new_documents_batch(documents_list)
+                    print(f"{GREEN}成功添加{len(new_ids)}個文檔，ID為：{new_ids}{RESET}")
+                else:
+                    print(f"{RED}輸入必須是JSON格式的列表{RESET}")
+            except json.JSONDecodeError:
+                print(f"{RED}輸入格式錯誤，無法解析為JSON列表。請使用格式如：[\"文檔1\", \"文檔2\"]{RESET}")
+        elif choice == '4':
+            doc_id = input(f"{BOLD}輸入要刪除的文檔ID (或輸入'back'返回): {RESET}")
+            if doc_id.lower() == 'back':
+                continue
+            delete_document(doc_id)
+        elif choice == '5':
+            doc_ids_input = input(f"{BOLD}輸入要刪除的文檔ID列表 (以逗號分隔，如 1,2,3) (或輸入'back'返回): {RESET}")
+            if doc_ids_input.lower() == 'back':
+                continue
+            try:
+                doc_ids = list(map(int, doc_ids_input.split(',')))
+                result = delete_document_batch(doc_ids)
+                print(result)
+            except ValueError:
+                print(f"{RED}無效的文檔ID列表，請確保輸入的是以逗號分隔的數字列表。{RESET}")
+        elif choice == '6':
             clear_all_cache()
             print(f"{GREEN}快取已清除{RESET}")
-        elif choice == '4':
+        elif choice == '7':
             boolean_search_interface()
-        elif choice == '5':
+        elif choice == '8':
             break
         else:
             print(f"{RED}無效選擇，請重新輸入{RESET}")
