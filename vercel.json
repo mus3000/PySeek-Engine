@@ -1,15 +1,16 @@
 {
-    
-    "routes" : [
-        {
-            "src": "/(.*)",
-            "dest": "/api.py"
-        }
-    ],
     "functions": {
-        "api/**": {
-        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
-        }
-    }
-
-}
+      "api.py": {
+        "runtime": "@vercel/python",
+        "memory": 1024,
+        "timeout": 10
+      }
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/api.py"
+      }
+    ]
+  }
+  
